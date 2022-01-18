@@ -1,7 +1,5 @@
 /**
- * @info RatingCalculator not finish yet ;)
- * @info replace() something is still wrong...
-
+ * @info RatingCalculator finish no Comments yet
  * 
  */
  function collect_ratings() {
