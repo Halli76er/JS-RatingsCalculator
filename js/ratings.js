@@ -1,7 +1,7 @@
 /**
  * @info RatingCalculator not finish yet ;)
- * @info replace() wrong
- * @info toFixed(2) wrong way
+ * @info replace() something is still wrong...
+
  * 
  */
  function collect_ratings() {
@@ -20,13 +20,12 @@
 		ratings.sum += (rating * parseInt(element.value));
 		ratings.count += parseInt(element.value);
 		if (ratings.count !== 0) {
-			average = ratings.sum / ratings.count;
-			ratings.average = average.toFixed(2);
+			ratings.average = ratings.sum / ratings.count;
 		}
 	});
 	return ratings;
 }
 document.addEventListener('change', () => {
 	const ratings = collect_ratings();
-	document.getElementById("average").setAttribute('value', ratings.average);
+	document.querySelector('#average').setAttribute('value', ratings.average.toFixed(2));
 });
